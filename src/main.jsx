@@ -7,6 +7,8 @@ import App from './App.jsx'
 import ProtectedRoute from './features/Auth/ProtectedRoute.jsx'
 import './index.css'
 import store from './redux/store.js'
+import LoginPage from './screens/Login.jsx'
+import Signup from './screens/Signup.jsx'
 
 
 
@@ -37,11 +39,11 @@ const router = createBrowserRouter([
   },
   {
     path:'/signup',
-    element:''
+    element:<Signup/>
   },
   {
     path:"/login",
-    element: ''
+    element: <LoginPage/>
   }
 ])
 

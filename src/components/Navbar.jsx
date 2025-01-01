@@ -1,18 +1,17 @@
-
 import toast from "react-hot-toast";
 import { IoIosLogOut } from "react-icons/io";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-// import { clearUser } from "../features/Auth/authSlice.ts";
+import { clearUser } from "../features/Auth/authSlice.js";
 
 
 const Navbar = () =>{
 
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        // dispatch(clearUser());
+        dispatch(clearUser());
         toast.success("Logged out")
         navigate("/login")
     }
