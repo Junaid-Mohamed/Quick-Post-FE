@@ -1,23 +1,12 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import './App.css';
+import LandingPage from './screens/LandingPage';
 
 function App() {
-  const [data,setData] = useState("");
-
-  useEffect(()=>{
-    (async()=>{
-      const resp = await axios.get('https://quick-post-be-1.vercel.app/');
-      console.log(resp.data);
-      setData(resp.data);
-
-    })();
-  },[])
 
   return (
-    <>
-      <h1 className='text-center my-24' >Data is this {data}</h1>
-    </>
+    <div className='bg-gray-200 min-h-screen'>
+    <LandingPage/>
+    </div>
   )
 }
 
