@@ -7,9 +7,12 @@ import App from './App.jsx'
 import ProtectedRoute from './features/Auth/ProtectedRoute.jsx'
 import './index.css'
 import store from './redux/store.js'
+import BookmarkScreen from './screens/BookmarkScreen.jsx'
+import ExploreScreen from './screens/ExploreScreen.jsx'
 import HomeScreen from './screens/HomeScreen.jsx'
 import LoginPage from './screens/Login.jsx'
 import Signup from './screens/Signup.jsx'
+import UserProfileScreen from './screens/UserProfileScreen.jsx'
 
 
 
@@ -24,19 +27,19 @@ const router = createBrowserRouter([
   },
   {
     path:'/profile',
-    element: <ProtectedRoute></ProtectedRoute> 
+    element: <ProtectedRoute><UserProfileScreen/></ProtectedRoute> 
   },
   {
     path:'/profile/:userId',
-    element: <ProtectedRoute></ProtectedRoute> 
+    element: <ProtectedRoute><UserProfileScreen/></ProtectedRoute> 
   },
   {
     path:'/explore',
-    element: <ProtectedRoute></ProtectedRoute> 
+    element: <ProtectedRoute><ExploreScreen/></ProtectedRoute> 
   },
   {
     path:'/bookmark',
-    element: <ProtectedRoute></ProtectedRoute> 
+    element: <ProtectedRoute><BookmarkScreen/></ProtectedRoute> 
   },
   {
     path:'/signup',
