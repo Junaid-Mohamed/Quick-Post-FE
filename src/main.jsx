@@ -47,7 +47,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store} >
-    <GoogleOAuthProvider>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID} >
     <RouterProvider router={router} />
     <Toaster/> {/** global toast to use to notification */}
     </GoogleOAuthProvider>
