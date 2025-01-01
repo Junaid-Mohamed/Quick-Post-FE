@@ -11,7 +11,7 @@ import { createPost } from "../../features/Posts/postSlice.js";
 const CreatePostCard = ({closeModal}) => {
 
     const [content, setContent] = useState("");
-    const [selectedImage, setSelectedImage] = useState<File | null>(null);
+    const [selectedImage, setSelectedImage] = useState(null);
     const handleSelectImage = useCallback(() => {
         const input = document.createElement('input');
         input.setAttribute("type","file");

@@ -4,8 +4,7 @@ import { CgProfile } from "react-icons/cg";
 import { CiBookmark, CiSearch } from "react-icons/ci";
 import { FaPencil } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
-import { MdCancel } from "react-icons/md";
-import { SiAzuredataexplorer } from "react-icons/si";
+import { MdCancel, MdOutlineExplore } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchAllUsers } from "../../features/User/userSlice.js";
@@ -22,7 +21,7 @@ const sidebarMenuItems = [
     },
     {
         title: 'Explore',
-        icon: <SiAzuredataexplorer />
+        icon: <MdOutlineExplore/>
     },
     {
         title: 'Bookmark',
