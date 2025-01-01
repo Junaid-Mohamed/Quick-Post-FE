@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <h1>Data is this {data}</h1>
+      <h1 className='text-center my-24' >Data is this {data}</h1>
     </>
   )
 }
